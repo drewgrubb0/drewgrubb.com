@@ -1,0 +1,68 @@
+{
+  "name": "drewgrubb.com",
+  "description": "Drew Grubb website portfolio v2",
+  "version": "1.0.0",
+  "author": "Drew Grubb <drew.grubb0@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/drewgrubb0/drewgrubb.com"
+  },
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "lint": "eslint --ignore-path .gitignore . --ext ts --ext tsx --ext js --ext jsx",
+    "lint:fix": "eslint --ignore-path .gitignore . --ext ts --ext tsx --ext js --ext jsx --fix"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "npm run lint:fix",
+      "git add"
+    ],
+    "*.scss": [
+      "prettier --write",
+      "stylelint --fix",
+      "git add"
+    ],
+    "{*.{json,md}}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "@types/react": "^17.0.2",
+    "@types/react-dom": "^17.0.1",
+    "@types/react-helmet": "^6.1.0",
+    "@types/styled-components": "^5.1.9",
+    "babel-plugin-styled-components": "^1.12.0",
+    "gatsby": "^2.26.1",
+    "gatsby-plugin-google-gtag": "^3.0.0",
+    "gatsby-plugin-robots-txt": "^1.5.5",
+    "gatsby-plugin-sitemap": "^3.0.0",
+    "gatsby-plugin-styled-components": "^4.1.0",
+    "gatsby-plugin-typescript": "^2.12.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "styled-components": "^5.2.1"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.18.0",
+    "@typescript-eslint/parser": "^4.18.0",
+    "eslint": "^7.22.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.22.0",
+    "husky": "^5.1.3",
+    "lint-staged": "^10.5.4",
+    "prettier": "^2.2.1",
+    "typescript": "^4.2.3"
+  }
+}
