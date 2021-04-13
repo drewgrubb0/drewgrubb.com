@@ -1,8 +1,10 @@
 ---
+company: 'iHeartMedia'
 title: 'Software Engineer'
 location: 'Austin, TX'
 range: 'August 2018 - Current'
 url: 'https://www.iheartmedia.com/'
+sortStartDate: '2018-09-01'
 ---
 
 ## Ad+ Plan

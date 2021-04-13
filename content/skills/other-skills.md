@@ -8,6 +8,7 @@ projectSkills:
   - CSS Animations
   - C/C++
   - Android Development
+position: 5
 ---
 
 I love learning new things in the tech world, and am constantly staying up to date with the latest and greatest paradigms.

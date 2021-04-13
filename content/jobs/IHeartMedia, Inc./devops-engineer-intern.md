@@ -1,8 +1,10 @@
 ---
+company: 'iHeartMedia'
 title: 'Devops Engineer Intern'
 location: 'Austin, TX'
 range: 'June - August 2018'
 url: 'https://www.iheartmedia.com/'
+sortStartDate: '2018-06-01'
 ---
 
 ## IHeart Healthcheck
