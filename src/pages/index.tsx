@@ -1,20 +1,19 @@
 import React, { ReactElement } from 'react';
+import About from '../components/content/about';
+import Contact from '../components/content/contact';
+import Hero from '../components/content/hero';
+import Jobs from '../components/content/jobs';
+import Skills from '../components/content/skills';
+import Layout from '../components/layout/layout';
 
 export default function Home(): ReactElement {
   return (
-    <div>
-      <h2>Under Construction</h2>
-      <p>
-        Something awesome is happening here. Thanks for stopping by but check
-        back soon ;)
-      </p>
-    </div>
-    // <Layout>
-    //   <Hero />
-    //   <About />
-    //   <Jobs />
-    //   <Skills />
-    //   <Contact />
-    // </Layout>
+    <Layout>
+      <Hero />
+      <About />
+      <Jobs />
+      <Skills />
+      <Contact />
+    </Layout>
   );
 }
