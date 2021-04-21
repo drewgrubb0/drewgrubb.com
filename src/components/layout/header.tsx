@@ -27,11 +27,34 @@ const StyledNav = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+`;
 
-    li > svg {
-      transform: translateY(15%);
-      width: 20px;
-      height: 20px;
+const StyledExternalLinks = styled.nav`
+  width: 25%;
+  ul {
+    padding: 0px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    li {
+      transition: 0.2s ease;
+      &:hover,
+      &:focus {
+        transform: scale(1.25, 1.25);
+      }
+      a {
+        color: black;
+        padding: 10px;
+        svg {
+          transform: translateY(15%);
+          width: 24px;
+          height: 24px;
+          stroke-width: 1.85;
+        }
+      }
     }
   }
 `;
@@ -61,25 +84,60 @@ const Header: FC = () => {
           <IconBuilder name="Logo" />
         </div>
       </StyledLogo>
-      <StyledNav>
+      <StyledExternalLinks>
         <ul>
           <li>
-            <IconBuilder name="Resume" />
+            <a
+              href="/resume.pdf"
+              aria-label="Resume"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <IconBuilder name="Resume" />
+            </a>
           </li>
           <li>
-            <IconBuilder name="Email" />
+            <a
+              href="mailto: drew.grubb0@gmail.com"
+              aria-label="Email"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <IconBuilder name="Email" />
+            </a>
           </li>
           <li>
-            <IconBuilder name="Github" />
+            <a
+              href="https://github.com/drewgrubb0"
+              aria-label="Github"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <IconBuilder name="Github" />
+            </a>
           </li>
           <li>
-            <IconBuilder name="LinkedIn" />
+            <a
+              href="https://www.linkedin.com/in/drew-grubb/"
+              aria-label="LinkedIn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <IconBuilder name="LinkedIn" />
+            </a>
           </li>
           <li>
-            <IconBuilder name="Facebook" />
+            <a
+              href="https://www.facebook.com/drew.grubb/"
+              aria-label="Facebook"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <IconBuilder name="Facebook" />
+            </a>
           </li>
         </ul>
-      </StyledNav>
+      </StyledExternalLinks>
     </StyledHeader>
   );
 };
