@@ -1,19 +1,23 @@
-import React, { FunctionComponent, ReactNode } from 'react';
+import React, { FC } from 'react';
+import styled from 'styled-components';
+import GlobalStyle from '../../styles/global';
 import Footer from './footer';
 import Header from './header';
 
-interface Props {
-  children: ReactNode;
-}
+const StyledContentDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
 
-const Layout: FunctionComponent<Props> = ({ children }: Props) => {
+const Layout: FC = (children) => {
   return (
-    <div>
+    <>
+      <GlobalStyle />
       <Header />
       <Footer />
 
-      <div id="content">{children}</div>
-    </div>
+      <StyledContentDiv>{children.children}</StyledContentDiv>
+    </>
   );
 };
 

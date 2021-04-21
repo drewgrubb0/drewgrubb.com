@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react';
+import React, { FC } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import {
   JobData,
@@ -7,7 +7,7 @@ import {
   JobQueryRequest,
 } from './jobs.interface';
 
-const Jobs: FunctionComponent = () => {
+const Jobs: FC = () => {
   const queryResult: JobQueryRequest = useStaticQuery(graphql`
     query {
       jobsData: allMarkdownRemark(

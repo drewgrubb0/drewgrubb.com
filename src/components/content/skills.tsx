@@ -1,12 +1,12 @@
 import { useStaticQuery, graphql } from 'gatsby';
-import React, { FunctionComponent } from 'react';
+import React, { FC } from 'react';
 import {
   SkillsData,
   SkillsQueryEdge,
   SkillsQueryRequest,
 } from './skills.interface';
 
-const Skills: FunctionComponent = () => {
+const Skills: FC = () => {
   const queryResult: SkillsQueryRequest = useStaticQuery(graphql`
     query {
       skillsData: allMarkdownRemark(
