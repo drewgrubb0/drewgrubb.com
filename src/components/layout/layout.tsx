@@ -4,9 +4,12 @@ import GlobalStyle from '../../styles/global';
 import Footer from './footer';
 import Header from './header';
 
-const StyledContentDiv = styled.div`
+const StyledMainContainer = styled.main`
   display: flex;
   flex-direction: column;
+
+  padding: 0 var(--base-padding);
+  margin-top: var(--header-height);
 `;
 
 const Layout: FC = (children) => {
@@ -14,9 +17,8 @@ const Layout: FC = (children) => {
     <>
       <GlobalStyle />
       <Header />
+      <StyledMainContainer>{children.children}</StyledMainContainer>
       <Footer />
-
-      <StyledContentDiv>{children.children}</StyledContentDiv>
     </>
   );
 };

@@ -53,7 +53,7 @@ const Jobs: FC = () => {
   const companyNames: string[] = Array.from(jobDataByCompanyGroup.keys());
 
   return (
-    <div>
+    <div id="work">
       {Array.from(jobDataByCompanyGroup.values()).map(
         (jobDataList: JobData[], i: number) => {
           return (

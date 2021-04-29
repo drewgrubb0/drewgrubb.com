@@ -1,14 +1,15 @@
+import { Link } from 'gatsby';
 import React, { FC } from 'react';
 import styled from 'styled-components';
-import IconBuilder from '../icons/icon-builder';
+import IconBuilder from '../shared/icons/icon-builder';
 
 const StyledHeader = styled.header`
   position: fixed;
   top: 0;
   width: 100%;
-  height: 70px;
+  height: var(--header-height);
   box-sizing: border-box;
-  padding: 0 60px;
+  padding: 0 calc(var(--base-padding) / 2);
   z-index: 100;
 
   display: flex;
@@ -27,6 +28,10 @@ const StyledNav = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 `;
 
@@ -46,15 +51,17 @@ const StyledExternalLinks = styled.nav`
         transform: scale(1.25, 1.25);
       }
       a {
-        color: black;
         padding: 10px;
         svg {
           transform: translateY(15%);
           width: 24px;
           height: 24px;
-          stroke-width: 1.85;
         }
       }
+    }
+
+    @media (max-width: 768px) {
+      display: none;
     }
   }
 `;
@@ -73,16 +80,24 @@ const Header: FC = () => {
     <StyledHeader>
       <StyledNav>
         <ul>
-          <li>About</li>
-          <li>Work</li>
-          <li>Skills</li>
-          <li>Contact</li>
+          <li>
+            <Link to="/#about">About</Link>
+          </li>
+          <li>
+            <Link to="/#work">Work</Link>
+          </li>
+          <li>
+            <Link to="/#skills">Skills</Link>
+          </li>
+          <li>
+            <Link to="/#contact">Contact</Link>
+          </li>
         </ul>
       </StyledNav>
       <StyledLogo>
-        <div>
+        <a href="/" aria-label="home">
           <IconBuilder name="Logo" />
-        </div>
+        </a>
       </StyledLogo>
       <StyledExternalLinks>
         <ul>

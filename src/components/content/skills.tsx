@@ -39,7 +39,7 @@ const Skills: FC = () => {
   );
 
   return (
-    <div>
+    <div id="skills">
       {skillDataMapped.map((skillData: SkillsData, i: number) => {
         return (
           <div key={`skillset-${i}`}>
