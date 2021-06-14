@@ -26,7 +26,7 @@ module.exports = {
         trackingIds: ['G-ZMC863V79N'],
         pluginConfig: {
           head: true,
-          respectDNT: true, // :)
+          respectDNT: true,
         },
       },
     },

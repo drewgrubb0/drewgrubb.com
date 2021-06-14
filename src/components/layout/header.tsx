@@ -1,7 +1,7 @@
 import { Link } from 'gatsby';
 import React, { FC } from 'react';
 import styled from 'styled-components';
-import IconBuilder from '../shared/icons/icon-builder';
+import { IconBuilder } from '@components/shared/icons';
 
 const StyledHeader = styled.header`
   position: fixed;

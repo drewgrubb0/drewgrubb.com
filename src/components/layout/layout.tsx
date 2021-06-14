@@ -1,8 +1,7 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
-import GlobalStyle from '../../styles/global';
-import Footer from './footer';
-import Header from './header';
+import { GlobalStyle } from '@styles';
+import { Footer, Header } from '@components';
 
 const StyledMainContainer = styled.main`
   display: flex;

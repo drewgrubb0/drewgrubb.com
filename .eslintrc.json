@@ -8,6 +8,14 @@
     "plugin:prettier/recommended"
   ],
   "settings": {
+    "import/resolver": {
+      "alias": [
+        ["@components", "./src/components"],
+        ["@pages", "./src/pages"],
+        ["@styles", "./src/styles"],
+        ["@config", "./src/config"]
+      ]
+    },
     "react": {
       "version": "detect"
     }

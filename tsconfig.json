@@ -13,6 +13,20 @@
       "noUnusedParameters": true,
       "removeComments": false,
       "preserveConstEnums": true,
+      "paths": {
+        "@components": [
+          "src/components"
+        ],
+        "@pages": [
+          "src/pages"
+        ],
+        "@styles": [
+          "src/styles"
+        ],
+        "@config": [
+          "src/config"
+        ],
+      }
     },
     "include": ["./src/**/*"]
 }
