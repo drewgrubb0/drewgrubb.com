@@ -55,21 +55,19 @@ const Jobs: FC = () => {
   return (
     <div id="work">
       {Array.from(jobDataByCompanyGroup.values()).map(
-        (jobDataList: JobData[], i: number) => {
-          return (
-            <div key={`company-${i}`}>
-              <h1>{companyNames[i]}</h1>
-              {jobDataList.map((jobData: JobData, j: number) => {
-                return (
-                  <div
-                    key={`pos-${j}`}
-                    dangerouslySetInnerHTML={{ __html: jobData.html }}
-                  />
-                );
-              })}
-            </div>
-          );
-        }
+        (jobDataList: JobData[], i: number) => (
+          <div key={`company-${i}`}>
+            <h1>{companyNames[i]}</h1>
+            {jobDataList.map((jobData: JobData, j: number) => {
+              return (
+                <div
+                  key={`pos-${j}`}
+                  dangerouslySetInnerHTML={{ __html: jobData.html }}
+                />
+              );
+            })}
+          </div>
+        )
       )}
     </div>
   );

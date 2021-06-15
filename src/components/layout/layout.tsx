@@ -1,7 +1,8 @@
 import React, { FC } from 'react';
-import styled from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from '@styles';
 import { Footer, Header } from '@components';
+import { theme } from '@styles';
 
 const StyledMainContainer = styled.main`
   display: flex;
@@ -14,10 +15,12 @@ const StyledMainContainer = styled.main`
 const Layout: FC = (children) => {
   return (
     <>
-      <GlobalStyle />
-      <Header />
-      <StyledMainContainer>{children.children}</StyledMainContainer>
-      <Footer />
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <Header />
+        <StyledMainContainer>{children.children}</StyledMainContainer>
+        <Footer />
+      </ThemeProvider>
     </>
   );
 };

@@ -13,7 +13,8 @@
         ["@components", "./src/components"],
         ["@pages", "./src/pages"],
         ["@styles", "./src/styles"],
-        ["@config", "./src/config"]
+        ["@config", "./src/config"],
+        ["@icons", "./src/components/shared/icons"]
       ]
     },
     "react": {

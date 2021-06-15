@@ -1,12 +1,5 @@
 import React, { FC } from 'react';
-import {
-  Resume,
-  Email,
-  Github,
-  Facebook,
-  LinkedIn,
-  UnknownIcon,
-} from '@components/shared/icons';
+import { Resume, Email, Github, Facebook, LinkedIn, UnknownIcon } from '@icons';
 
 export interface IconLoaderProps {
   name: string;

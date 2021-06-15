@@ -40,14 +40,24 @@ const Skills: FC = () => {
 
   return (
     <div id="skills">
-      {skillDataMapped.map((skillData: SkillsData, i: number) => {
-        return (
-          <div key={`skillset-${i}`}>
-            <h2>{skillData.title}</h2>
-            <div dangerouslySetInnerHTML={{ __html: skillData.html }} />
-          </div>
-        );
-      })}
+      {skillDataMapped.map((skillData: SkillsData, i: number) => (
+        <div key={`skillset-${i}`}>
+          <h2>{skillData.title}</h2>
+          <div dangerouslySetInnerHTML={{ __html: skillData.html }} />
+          <h4>Proficient Skills</h4>
+          <ul>
+            {skillData.proficientSkills.map((skill: string, index: number) => (
+              <li key={index}>{skill}</li>
+            ))}
+          </ul>
+          <h4>Project Skills</h4>
+          <ul>
+            {skillData.projectSkills.map((skill: string, index: number) => (
+              <li key={index}>{skill}</li>
+            ))}
+          </ul>
+        </div>
+      ))}
     </div>
   );
 };

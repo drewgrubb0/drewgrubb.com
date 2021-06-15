@@ -1,7 +1,8 @@
 import { Link } from 'gatsby';
 import React, { FC } from 'react';
 import styled from 'styled-components';
-import { IconBuilder } from '@components/shared/icons';
+import { IconBuilder } from '@icons';
+import { navLinks, navIcons, SiteNavLink } from '@config';
 
 const StyledHeader = styled.header`
   position: fixed;
@@ -29,6 +30,10 @@ const StyledNav = styled.nav`
     justify-content: space-between;
     align-items: center;
 
+    a {
+      ${({ theme }) => theme.mixins.underlinedLink};
+    }
+
     @media (max-width: 768px) {
       display: none;
     }
@@ -50,7 +55,8 @@ const StyledExternalLinks = styled.nav`
       &:focus {
         transform: scale(1.25, 1.25);
       }
-      a {
+
+      & > a {
         padding: 10px;
         svg {
           transform: translateY(15%);
@@ -80,18 +86,11 @@ const Header: FC = () => {
     <StyledHeader>
       <StyledNav>
         <ul>
-          <li>
-            <Link to="/#about">About</Link>
-          </li>
-          <li>
-            <Link to="/#work">Work</Link>
-          </li>
-          <li>
-            <Link to="/#skills">Skills</Link>
-          </li>
-          <li>
-            <Link to="/#contact">Contact</Link>
-          </li>
+          {navLinks.map((navLink: SiteNavLink, index: number) => (
+            <li key={index}>
+              <Link to={navLink.url}>{navLink.name}</Link>
+            </li>
+          ))}
         </ul>
       </StyledNav>
       <StyledLogo>
@@ -101,56 +100,18 @@ const Header: FC = () => {
       </StyledLogo>
       <StyledExternalLinks>
         <ul>
-          <li>
-            <a
-              href="/resume.pdf"
-              aria-label="Resume"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <IconBuilder name="Resume" />
-            </a>
-          </li>
-          <li>
-            <a
-              href="mailto: drew.grubb0@gmail.com"
-              aria-label="Email"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <IconBuilder name="Email" />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://github.com/drewgrubb0"
-              aria-label="Github"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <IconBuilder name="Github" />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.linkedin.com/in/drew-grubb/"
-              aria-label="LinkedIn"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <IconBuilder name="LinkedIn" />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.facebook.com/drew.grubb/"
-              aria-label="Facebook"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <IconBuilder name="Facebook" />
-            </a>
-          </li>
+          {navIcons.map((navIcon: SiteNavLink, index: number) => (
+            <li key={index}>
+              <a
+                href={navIcon.url}
+                aria-label={navIcon.name}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <IconBuilder name={navIcon.name} />
+              </a>
+            </li>
+          ))}
         </ul>
       </StyledExternalLinks>
     </StyledHeader>

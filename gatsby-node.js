@@ -10,6 +10,7 @@ exports.onCreateWebpackConfig = ({ actions }) => {
         '@config': path.resolve(__dirname, 'src/config'),
         '@pages': path.resolve(__dirname, 'src/pages'),
         '@styles': path.resolve(__dirname, 'src/styles'),
+        '@icons': path.resolve(__dirname, 'src/components/shared/icons'),
       },
     },
   });

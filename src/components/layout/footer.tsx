@@ -6,10 +6,10 @@ const StyledFooter = styled.footer`
   height: 40px;
   background-color: blue;
 
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
 
   a {
     color: #ffffff;
@@ -24,7 +24,7 @@ const Footer: FC = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        Copyright © 2021 Drew Grubb
+        Designed and Developed by Drew Grubb
       </a>
     </StyledFooter>
   );
