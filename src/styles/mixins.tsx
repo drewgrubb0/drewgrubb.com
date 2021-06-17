@@ -22,6 +22,16 @@ const mixins = {
       transform: scaleX(1);
     }
   `,
+  smoothScrollPadding: css`
+    padding: var(--header-height) 0 0 0;
+  `,
+  flexSection: css`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 920px; //media
+    margin: 0 auto;
+  `,
 };
 
 export default mixins;

@@ -3,6 +3,7 @@ title: 'Other'
 proficientSkills:
   - Agile
   - Git
+  - Jasper
 projectSkills:
   - Golang
   - CSS Animations

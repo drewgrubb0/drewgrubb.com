@@ -6,8 +6,8 @@ proficientSkills:
   - SCSS/CSS
   - HTML
 projectSkills:
-  - React
-  - Gatsby
+  - React, Gatsby
+  - Ag-Grid
   - GraphQL
 position: 2
 ---

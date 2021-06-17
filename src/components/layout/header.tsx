@@ -24,13 +24,13 @@ const StyledHeader = styled.header`
 const StyledNav = styled.nav`
   width: 25%;
   ul {
-    padding: 0px;
     list-style: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     a {
+      padding: 4px;
       ${({ theme }) => theme.mixins.underlinedLink};
     }
 
@@ -94,7 +94,7 @@ const Header: FC = () => {
         </ul>
       </StyledNav>
       <StyledLogo>
-        <a href="/" aria-label="home">
+        <a href="#" aria-label="home">
           <IconBuilder name="Logo" />
         </a>
       </StyledLogo>

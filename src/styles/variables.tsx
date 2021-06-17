@@ -3,6 +3,7 @@ import { css } from 'styled-components';
 const variables = css`
   :root {
     --header-height: 70px;
+    --footer-height: 40px;
     --base-padding: 80px;
 
     @media (${({ theme }) => theme.breakPoints.laptop}) {

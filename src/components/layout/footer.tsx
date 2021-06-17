@@ -3,16 +3,17 @@ import styled from 'styled-components';
 
 const StyledFooter = styled.footer`
   width: 100%;
-  height: 40px;
+  height: var(--footer-height);
   background-color: blue;
 
-  /* display: flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; */
+  justify-content: center;
 
   a {
     color: #ffffff;
+    ${({ theme }) => theme.mixins.underlinedLink};
   }
 `;
 

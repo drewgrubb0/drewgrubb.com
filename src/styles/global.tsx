@@ -9,6 +9,11 @@ const GlobalStyle = createGlobalStyle`
     width: 100%;
   }
 
+  section {
+    ${({ theme }) => theme.mixins.smoothScrollPadding};
+    ${({ theme }) => theme.mixins.flexSection};
+  }
+
   a {
     text-decoration: none;
     color: inherit;

@@ -1,10 +1,13 @@
 import { useStaticQuery, graphql } from 'gatsby';
 import React, { FC } from 'react';
+import styled from 'styled-components';
 import {
   SkillsData,
   SkillsQueryEdge,
   SkillsQueryRequest,
 } from './skills.interface';
+
+const StyledSkills = styled.section``;
 
 const Skills: FC = () => {
   const queryResult: SkillsQueryRequest = useStaticQuery(graphql`
@@ -39,18 +42,19 @@ const Skills: FC = () => {
   );
 
   return (
-    <div id="skills">
+    <StyledSkills id="skills">
+      <h1>Skills</h1>
       {skillDataMapped.map((skillData: SkillsData, i: number) => (
         <div key={`skillset-${i}`}>
           <h2>{skillData.title}</h2>
           <div dangerouslySetInnerHTML={{ __html: skillData.html }} />
-          <h4>Proficient Skills</h4>
+          <h3>Proficient Skills</h3>
           <ul>
             {skillData.proficientSkills.map((skill: string, index: number) => (
               <li key={index}>{skill}</li>
             ))}
           </ul>
-          <h4>Project Skills</h4>
+          <h3>Project Skills</h3>
           <ul>
             {skillData.projectSkills.map((skill: string, index: number) => (
               <li key={index}>{skill}</li>
@@ -58,7 +62,7 @@ const Skills: FC = () => {
           </ul>
         </div>
       ))}
-    </div>
+    </StyledSkills>
   );
 };
 

@@ -6,6 +6,9 @@ import {
   JobQueryEdge,
   JobQueryRequest,
 } from './jobs.interface';
+import styled from 'styled-components';
+
+const StyledJobs = styled.section``;
 
 const Jobs: FC = () => {
   const queryResult: JobQueryRequest = useStaticQuery(graphql`
@@ -53,7 +56,8 @@ const Jobs: FC = () => {
   const companyNames: string[] = Array.from(jobDataByCompanyGroup.keys());
 
   return (
-    <div id="work">
+    <StyledJobs id="work">
+      <h1>Work Experience</h1>
       {Array.from(jobDataByCompanyGroup.values()).map(
         (jobDataList: JobData[], i: number) => (
           <div key={`company-${i}`}>
@@ -69,7 +73,7 @@ const Jobs: FC = () => {
           </div>
         )
       )}
-    </div>
+    </StyledJobs>
   );
 };
 
