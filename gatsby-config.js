@@ -11,6 +11,9 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     'gatsby-plugin-sitemap',
     'gatsby-plugin-robots-txt',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
+    'gatsby-background-image',
     ////gatsby-plugin-manifest && gatsby-plugin-offline when there is an icon
     {
       resolve: 'gatsby-source-filesystem',

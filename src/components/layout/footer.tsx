@@ -12,7 +12,7 @@ const StyledFooter = styled.footer`
   justify-content: center;
 
   a {
-    color: #ffffff;
+    color: var(--soft-white-text);
     ${({ theme }) => theme.mixins.underlinedLink};
   }
 `;

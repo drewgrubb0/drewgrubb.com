@@ -30,7 +30,10 @@
         "@icons": [
           "src/components/shared/icons"
         ],
+        "@images": [
+          "static/images"
+        ]
       }
     },
-    "include": ["./src/**/*"]
+    "include": ["./src/**/*", "static/config.tsx"]
 }

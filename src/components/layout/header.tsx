@@ -18,7 +18,9 @@ const StyledHeader = styled.header`
   align-items: center;
   text-align: center;
 
-  background-color: blue;
+  background-color: rgba(0, 153, 255, 0.9);
+  box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%);
+  backdrop-filter: blur(10px);
 `;
 
 const StyledNav = styled.nav`
@@ -30,6 +32,7 @@ const StyledNav = styled.nav`
     align-items: center;
 
     a {
+      color: var(--black);
       padding: 4px;
       ${({ theme }) => theme.mixins.underlinedLink};
     }
@@ -57,6 +60,7 @@ const StyledExternalLinks = styled.nav`
       }
 
       & > a {
+        color: var(--black);
         padding: 10px;
         svg {
           transform: translateY(15%);

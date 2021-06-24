@@ -7,6 +7,11 @@ import {
   SkillsQueryRequest,
 } from './skills.interface';
 
+const StyledBackground = styled.div`
+  background-color: var(--grey-light);
+  border-bottom: 1px solid var(--grey);
+`;
+
 const StyledSkills = styled.section``;
 
 const Skills: FC = () => {
@@ -42,27 +47,31 @@ const Skills: FC = () => {
   );
 
   return (
-    <StyledSkills id="skills">
-      <h1>Skills</h1>
-      {skillDataMapped.map((skillData: SkillsData, i: number) => (
-        <div key={`skillset-${i}`}>
-          <h2>{skillData.title}</h2>
-          <div dangerouslySetInnerHTML={{ __html: skillData.html }} />
-          <h3>Proficient Skills</h3>
-          <ul>
-            {skillData.proficientSkills.map((skill: string, index: number) => (
-              <li key={index}>{skill}</li>
-            ))}
-          </ul>
-          <h3>Project Skills</h3>
-          <ul>
-            {skillData.projectSkills.map((skill: string, index: number) => (
-              <li key={index}>{skill}</li>
-            ))}
-          </ul>
-        </div>
-      ))}
-    </StyledSkills>
+    <StyledBackground>
+      <StyledSkills id="skills">
+        <h1>Skills</h1>
+        {skillDataMapped.map((skillData: SkillsData, i: number) => (
+          <div key={`skillset-${i}`}>
+            <h2>{skillData.title}</h2>
+            <div dangerouslySetInnerHTML={{ __html: skillData.html }} />
+            <h3>Proficient Skills</h3>
+            <ul>
+              {skillData.proficientSkills.map(
+                (skill: string, index: number) => (
+                  <li key={index}>{skill}</li>
+                )
+              )}
+            </ul>
+            <h3>Project Skills</h3>
+            <ul>
+              {skillData.projectSkills.map((skill: string, index: number) => (
+                <li key={index}>{skill}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </StyledSkills>
+    </StyledBackground>
   );
 };
 

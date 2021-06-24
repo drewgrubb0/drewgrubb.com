@@ -11,7 +11,7 @@ const mixins = {
       height: 2px;
       bottom: 0;
       left: 0;
-      background-color: green;
+      background-color: var(--black);
       visibility: hidden;
       transform: scaleX(0);
       transition: all 0.15s ease-in-out 0s;
@@ -23,13 +23,13 @@ const mixins = {
     }
   `,
   smoothScrollPadding: css`
-    padding: var(--header-height) 0 0 0;
+    padding: var(--header-height) 0 calc(var(--header-height) / 2);
   `,
   flexSection: css`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 920px; //media
+    max-width: 920px;
     margin: 0 auto;
   `,
 };

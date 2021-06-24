@@ -11,6 +11,7 @@ exports.onCreateWebpackConfig = ({ actions }) => {
         '@pages': path.resolve(__dirname, 'src/pages'),
         '@styles': path.resolve(__dirname, 'src/styles'),
         '@icons': path.resolve(__dirname, 'src/components/shared/icons'),
+        '@images': path.resolve(__dirname, 'static/images'),
       },
     },
   });
